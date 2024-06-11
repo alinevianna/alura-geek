@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --main-color: #5D04D9;
+    --secondary-color: #03318C;
+    --terciary-color: #ffffff;
+    --main-font: "Press Start 2P", system-ui;
+    --secondary-font: "IBM Plex Mono", monospace;
+    --sb-thumb-color: #d6d6d6;
+    --sb-size: 9px;
+}
+
+body {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+header {
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    color: var(--terciary-color);
+}
+
+header p {
+    color: var(--terciary-color);
+}
+
+.hearts__image {
+    width: 110px;
+}
+
+.red {
+    color: red;
+}
+
+/* Seção produtos */
+
+section .products {
+    display: flex;
+    width: 100vw;
+    height: auto;
+}
+
+.products__display, .add__products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.products__display {
+    width: 65vw;
+    background-color: pink;
+    height: 90vh;
+}
+
+.card__display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: -12px 10px 10px -5.8px #00000040;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    width: 196px;
+    height: 258px;
+    padding: 10px;
+    gap: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: var(--secondary-font);
+    color: var(--terciary-color);
+    box-shadow: -12px 10px 10px -5.8px #00000040;
+}
+
+.card-container--value {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.trash__icon {
+    width: 30px;
+}
+
+/* Card Scrollbar*/
+  
+.card__display::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+  
+.card__display::-webkit-scrollbar-track {
+    background: var(--terciary-color);
+    border-radius: 10px;
+}
+  
+.card__display::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+}
+
+/* Seção adicionar produtos */
+
+.add__products {
+    width: 35vw;
+    background-color: lightblue;
+}
+
+.add__products button {
+    width: 140px;
+    height: 40px;
+    border-radius: 15px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.btn-keep {
+    background-color: var(--secondary-color);
+    color: var(--terciary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-clean {
+    background-color: var(--terciary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
